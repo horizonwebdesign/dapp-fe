@@ -86,7 +86,7 @@ export function WalletConnect() {
                   variant: "destructive",
                 });
                 // Optional: disconnect if signature is mandatory
-                // disconnect();
+                disconnect();
               } else {
                 console.error("Login/Verification error", signError);
                 toast({
@@ -123,7 +123,7 @@ export function WalletConnect() {
     });
   };
 
-  if (isConnected && address) {
+  if (isConnected && address && !isSigning) {
     return (
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
