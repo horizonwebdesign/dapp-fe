@@ -4,11 +4,11 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import Staking from "./pages/Staking";
-import Minting from "./pages/Minting";
 import NotFound from "./pages/NotFound";
 import { WagmiProvider } from "wagmi";
 import { config } from "./lib/wagmi";
+import Staking from "./pages/staking";
+import Minting from "./pages/minting";
 
 const queryClient = new QueryClient();
 
