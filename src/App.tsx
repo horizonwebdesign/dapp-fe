@@ -9,8 +9,8 @@ import { WagmiProvider } from "wagmi";
 import { config } from "./lib/wagmi";
 import Staking from "./pages/staking";
 import Minting from "./pages/minting";
-import { Analytics } from "@vercel/analytics/next";
 const queryClient = new QueryClient();
+import { Analytics } from "@vercel/analytics/react";
 
 const App = () => (
   <WagmiProvider config={config}>
