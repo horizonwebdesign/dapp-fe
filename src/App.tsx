@@ -9,7 +9,7 @@ import { WagmiProvider } from "wagmi";
 import { config } from "./lib/wagmi";
 import Staking from "./pages/staking";
 import Minting from "./pages/minting";
-
+import { Analytics } from "@vercel/analytics/next";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -25,6 +25,7 @@ const App = () => (
             <Route path="/minting" element={<Minting />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
+            <Analytics />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
