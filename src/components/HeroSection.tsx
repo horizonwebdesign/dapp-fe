@@ -4,11 +4,36 @@ import heroCityscape from "@/assets/hero-cityscape.jpg";
 import heroDavos from "@/assets/hero-davos.jpg";
 import heroOffice from "@/assets/hero-office.jpg";
 import heroFuture from "@/assets/hero-future.jpg";
+import Hero1 from "@/assets/1.png";
+import Hero2 from "@/assets/2.jpg";
+import Hero3 from "@/assets/3.jpg";
 
 const spotlightData = [
   {
+    tab: "RWA Transition",
+    title: "Guiding Businesses into the Blockchain-Based RWA Ecosystem",
+    desc: "Training and developing this new frontier through real-world transition, we guide businesses from traditional platforms into the blockchain-based RWA ecosystem—equipping them with the insights and strategies needed to succeed at every step of the journey.",
+    cta: "Explore RWA Transition",
+    image: Hero2,
+  },
+  {
+    tab: "Asset Management",
+    title: "Maximizing the Potential of Real-World Assets",
+    desc: "By managing real-world assets (RWAs) while maximizing the full potential of this emerging ecosystem, we are helping shift the pendulum toward a new era of business—unlocking greater market share and redefining how value is created and managed.",
+    cta: "Discover Asset Opportunities",
+    image: Hero3,
+  },
+  {
+    tab: "Web3 Integration",
+    title: "Integrating Traditional Businesses into the Web3 Economy",
+    desc: "We integrate new clients and businesses from traditional models into the evolving Web3 blockchain ecosystem, providing strategic guidance that unlocks new opportunities and redefines how business is conducted in this new era of asset management.",
+    cta: "Start Web3 Integration",
+    image: Hero1,
+  },
+  {
     tab: "Stake your tokens and earn passive rewards today",
     title: "Stake, earn, and grow your portfolio effortlessly",
+    desc: "Put your tokens to work by staking them securely on-chain. Earn passive rewards while supporting the network and growing your crypto portfolio over time.",
     cta: "Start staking",
     link: "/staking",
     image: heroCityscape,
@@ -16,21 +41,10 @@ const spotlightData = [
   {
     tab: "Mint unique digital assets on-chain in seconds",
     title: "Mint NFTs and digital assets with zero friction",
+    desc: "Create and launch unique NFTs or digital assets directly on the blockchain in just a few clicks. Fast, secure, and designed for creators and businesses.",
     cta: "Mint now",
     link: "/minting",
     image: heroDavos,
-  },
-  {
-    tab: "DeFi yields reimagined with next-gen protocols",
-    title: "Unlock next-generation DeFi yields securely",
-    cta: "Explore DeFi",
-    image: heroOffice,
-  },
-  {
-    tab: "Governance and community-driven protocol evolution",
-    title: "Shape the future through decentralized governance",
-    cta: "Join governance",
-    image: heroFuture,
   },
 ];
 
@@ -86,7 +100,7 @@ const HeroSection = () => {
           <div className="section-container w-full">
             <h1
               key={activeIndex}
-              className="text-3xl md:text-5xl font-bold text-background max-w-lg leading-tight animate-fade-in"
+              className="text-3xl md:text-5xl font-bold text-background max-w-3xl leading-tight animate-fade-in"
             >
               {active.title}
             </h1>
@@ -97,6 +111,7 @@ const HeroSection = () => {
               {active.cta}
               <ArrowRight className="h-4 w-4" />
             </a>
+            <p className="text-sm text-white mt-6 max-w-4xl">{active.desc}</p>
           </div>
         </div>
 
@@ -121,7 +136,7 @@ const HeroSection = () => {
 
       {/* Spotlight tabs - desktop only (1020px+) */}
       <div className="section-container -mt-8 relative z-10 hidden lg:block">
-        <div className="bg-background rounded-xl shadow-lg border border-border grid grid-cols-[auto_1fr_1fr_1fr_1fr] overflow-hidden">
+        <div className="bg-background rounded-xl shadow-lg border border-border grid grid-cols-[auto_1fr_1fr_1fr_1fr_1fr] overflow-hidden">
           <span className="px-5 py-4 text-sm font-bold text-primary self-center">
             Featured
             <br />
